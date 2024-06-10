@@ -1,0 +1,2 @@
+kubectl apply -f /home/hannello/Documents/TAIS/DockerTutorial/deployment/containerization_example/deployment.yaml -f /home/hannello/Documents/TAIS/DockerTutorial/deployment/containerization_example/service.yaml
+minikube service myapp-service
