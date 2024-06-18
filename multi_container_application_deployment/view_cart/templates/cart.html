@@ -8,11 +8,11 @@
 <body>
     <h1>Shopping Cart</h1>
     <ul>
-        {% for item in cart %}
+        {% for item in cart_items %}
             <li>{{ item.product_name }} - ${{ item.price }}</li>
         {% endfor %}
     </ul>
     <p>Total: ${{ total }}</p>
-    <a href="/">Back to Product List</a>
+    <a href="/back_to_product_list">Back to Product List</a>
 </body>
 </html>

@@ -9,3 +9,10 @@ CREATE TABLE products (
 INSERT INTO products (name, price) VALUES ('Product 1', 10.00);
 INSERT INTO products (name, price) VALUES ('Product 2', 20.00);
 INSERT INTO products (name, price) VALUES ('Product 3', 30.00);
+
+CREATE TABLE cart_items (
+    id SERIAL PRIMARY KEY,
+    product_id INT NOT NULL,
+    quantity INT NOT NULL,
+    FOREIGN KEY (product_id) REFERENCES products (id)
+);
