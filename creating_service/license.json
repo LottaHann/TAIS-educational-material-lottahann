@@ -1,0 +1,18 @@
+{
+    "$schema": "https://raw.githubusercontent.com/acumos/license-manager/master/license-manager-client-library/src/main/resources/schema/1.0.0/license-profile.json",
+    "keyword": "Apache-2.0",
+    "licenseName": "Apache License 2.0",
+    "copyright": {
+        "year": 2024,
+        "softwareType": "Machine Learning Model",
+        "company": "Company A",
+        "companyName": "Company A",
+        "suffix": "All rights reserved."
+    },
+    "contact": {
+        "name": "John Doe",
+        "URL": "https://example.com",
+        "email": "contact@example.com",
+        "rtuRequired": false
+    }
+}
