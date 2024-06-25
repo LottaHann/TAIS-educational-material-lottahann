@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package test;
+
+service TestingService {
+  rpc TestModel (TestRequest) returns (TestResponse);
+}
+
+message TestRequest {
+  repeated double previous_close = 1;
+  repeated double close = 2;
+  repeated double coefficients = 3;
+  double intercept = 4;
+}
+
+message TestResponse {
+  repeated double predictions = 1;
+  double rmse = 2;
+}

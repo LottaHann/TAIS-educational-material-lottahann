@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package train;
+
+service TrainingService {
+  rpc TrainModel (TrainRequest) returns (TrainResponse);
+}
+
+message TrainRequest {
+  repeated double previous_close = 1;
+  repeated double close = 2;
+}
+
+message TrainResponse {
+  repeated double coefficients = 1;
+  double intercept = 2;
+  double rmse = 3;
+}

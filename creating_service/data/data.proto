@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package data;
+
+// Request message containing CSV data as bytes.
+message DataRequest {
+    bytes csv_content = 1;
+}
+
+// Response message containing cleaned data.
+message DataResponse {
+    repeated double previous_close = 1;
+    repeated double close = 2;
+    repeated string dates = 3;
+}
+
+
+// The DataService definition.
+service DataService {
+    // Sends CSV content and receives cleaned data.
+    rpc CleanData (DataRequest) returns (DataResponse);
+}
