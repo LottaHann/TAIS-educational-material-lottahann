@@ -1,14 +1,18 @@
 import numpy as np
+import pickle
 from sklearn.linear_model import LinearRegression
 
-def train_model(previous_close, close):
-    X = np.array(previous_close).reshape(-1, 1)
-    y = np.array(close)
-    
+def train_model(x_train, y_train):
     model = LinearRegression()
-    model.fit(X, y)
+    #make x_train 2D
+    x_train = np.array(x_train).reshape(-1, 1)
+    print (x_train)
+    model.fit(x_train, y_train)
     
-    predictions = model.predict(X)
-    rmse = np.sqrt(np.mean((y - predictions) ** 2))
+    #predictions = model.predict(X)
+    #rmse = np.sqrt(np.mean((y - predictions) ** 2))
+
+    #turn model into binary format:
+    model_binary = pickle.dumps(model)
     
-    return model.coef_.tolist(), model.intercept_, rmse
+    return model_binary

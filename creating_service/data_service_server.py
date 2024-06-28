@@ -2,10 +2,10 @@
 
 from concurrent import futures
 import grpc
-import data_pb2_grpc
-import data_pb2
+from data import data_pb2_grpc
+from data import data_pb2
 import pandas as pd
-from data_service import clean_data
+from data.data_service import clean_data
 import os
 import io
 import logging
@@ -19,13 +19,19 @@ class DataServiceServicer(data_pb2_grpc.DataServiceServicer):
             
             logging.info("Received CSV data, cleaning...")
             # Clean data
-            previous_close, close, dates = clean_data(csv_file)
+            x_train, x_test, y_train, y_test, dates_train, dates_test = clean_data(csv_file)
             logging.info("Data cleaned successfully")
+
+            print(x_train, x_test, y_train, y_test, dates_train, dates_test)
+
             
             return data_pb2.DataResponse(
-                previous_close=previous_close,
-                close=close,
-                dates=dates
+                x_train=x_train,
+                x_test=x_test,
+                y_train=y_train,
+                y_test=y_test,
+                dates_train=dates_train,
+                dates_test=dates_test
             )
         except Exception as e:
             logging.exception("Error cleaning data")

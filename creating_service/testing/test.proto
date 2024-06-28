@@ -7,13 +7,12 @@ service TestingService {
 }
 
 message TestRequest {
-  repeated double previous_close = 1;
-  repeated double close = 2;
-  repeated double coefficients = 3;
-  double intercept = 4;
+  bytes model = 1;
+  repeated double x_test = 2;
+  repeated double y_test = 3;
+  repeated string dates_test = 4;
 }
 
 message TestResponse {
-  repeated double predictions = 1;
   double rmse = 2;
 }

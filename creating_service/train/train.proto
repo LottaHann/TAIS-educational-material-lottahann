@@ -7,12 +7,10 @@ service TrainingService {
 }
 
 message TrainRequest {
-  repeated double previous_close = 1;
-  repeated double close = 2;
+  repeated double x_train = 1;
+  repeated double y_train = 2;
 }
 
 message TrainResponse {
-  repeated double coefficients = 1;
-  double intercept = 2;
-  double rmse = 3;
+  bytes model = 1;
 }

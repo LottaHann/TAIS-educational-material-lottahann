@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-import train_pb2 as train__pb2
+import train.train_pb2 as train__pb2
 
 
 class TrainingServiceStub(object):

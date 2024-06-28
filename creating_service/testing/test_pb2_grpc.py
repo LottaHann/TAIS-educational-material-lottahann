@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-import test_pb2 as test__pb2
+import testing.test_pb2 as test__pb2
 
 
 class TestingServiceStub(object):

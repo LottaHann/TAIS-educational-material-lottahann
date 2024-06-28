@@ -14,7 +14,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\ntest.proto\x12\x04test\"]\n\x0bTestRequest\x12\x16\n\x0eprevious_close\x18\x01 \x03(\x01\x12\r\n\x05\x63lose\x18\x02 \x03(\x01\x12\x14\n\x0c\x63oefficients\x18\x03 \x03(\x01\x12\x11\n\tintercept\x18\x04 \x01(\x01\"1\n\x0cTestResponse\x12\x13\n\x0bpredictions\x18\x01 \x03(\x01\x12\x0c\n\x04rmse\x18\x02 \x01(\x01\x32\x44\n\x0eTestingService\x12\x32\n\tTestModel\x12\x11.test.TestRequest\x1a\x12.test.TestResponseb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\ntest.proto\x12\x04test\"P\n\x0bTestRequest\x12\r\n\x05model\x18\x01 \x01(\x0c\x12\x0e\n\x06x_test\x18\x02 \x03(\x01\x12\x0e\n\x06y_test\x18\x03 \x03(\x01\x12\x12\n\ndates_test\x18\x04 \x03(\t\"\x1c\n\x0cTestResponse\x12\x0c\n\x04rmse\x18\x02 \x01(\x01\x32\x44\n\x0eTestingService\x12\x32\n\tTestModel\x12\x11.test.TestRequest\x1a\x12.test.TestResponseb\x06proto3')
 
 
 
@@ -39,9 +39,9 @@ if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
   _TESTREQUEST._serialized_start=20
-  _TESTREQUEST._serialized_end=113
-  _TESTRESPONSE._serialized_start=115
-  _TESTRESPONSE._serialized_end=164
-  _TESTINGSERVICE._serialized_start=166
-  _TESTINGSERVICE._serialized_end=234
+  _TESTREQUEST._serialized_end=100
+  _TESTRESPONSE._serialized_start=102
+  _TESTRESPONSE._serialized_end=130
+  _TESTINGSERVICE._serialized_start=132
+  _TESTINGSERVICE._serialized_end=200
 # @@protoc_insertion_point(module_scope)

@@ -7,11 +7,15 @@ message DataRequest {
     bytes csv_content = 1;
 }
 
+
 // Response message containing cleaned data.
 message DataResponse {
-    repeated double previous_close = 1;
-    repeated double close = 2;
-    repeated string dates = 3;
+    repeated double x_train = 1;
+    repeated double x_test = 2;
+    repeated double y_train = 3;
+    repeated double y_test = 4;
+    repeated string dates_train = 5;
+    repeated string dates_test = 6;
 }
 
 

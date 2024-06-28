@@ -14,7 +14,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0btrain.proto\x12\x05train\"5\n\x0cTrainRequest\x12\x16\n\x0eprevious_close\x18\x01 \x03(\x01\x12\r\n\x05\x63lose\x18\x02 \x03(\x01\"F\n\rTrainResponse\x12\x14\n\x0c\x63oefficients\x18\x01 \x03(\x01\x12\x11\n\tintercept\x18\x02 \x01(\x01\x12\x0c\n\x04rmse\x18\x03 \x01(\x01\x32J\n\x0fTrainingService\x12\x37\n\nTrainModel\x12\x13.train.TrainRequest\x1a\x14.train.TrainResponseb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0btrain.proto\x12\x05train\"0\n\x0cTrainRequest\x12\x0f\n\x07x_train\x18\x01 \x03(\x01\x12\x0f\n\x07y_train\x18\x02 \x03(\x01\"\x1e\n\rTrainResponse\x12\r\n\x05model\x18\x01 \x01(\x0c\x32J\n\x0fTrainingService\x12\x37\n\nTrainModel\x12\x13.train.TrainRequest\x1a\x14.train.TrainResponseb\x06proto3')
 
 
 
@@ -39,9 +39,9 @@ if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
   _TRAINREQUEST._serialized_start=22
-  _TRAINREQUEST._serialized_end=75
-  _TRAINRESPONSE._serialized_start=77
-  _TRAINRESPONSE._serialized_end=147
-  _TRAININGSERVICE._serialized_start=149
-  _TRAININGSERVICE._serialized_end=223
+  _TRAINREQUEST._serialized_end=70
+  _TRAINRESPONSE._serialized_start=72
+  _TRAINRESPONSE._serialized_end=102
+  _TRAININGSERVICE._serialized_start=104
+  _TRAININGSERVICE._serialized_end=178
 # @@protoc_insertion_point(module_scope)
